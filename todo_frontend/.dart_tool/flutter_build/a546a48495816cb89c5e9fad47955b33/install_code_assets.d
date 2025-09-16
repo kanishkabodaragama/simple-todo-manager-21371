@@ -1,0 +1,1 @@
+ /home/kavia/workspace/code-generation/simple-todo-manager-21371/todo_frontend/.dart_tool/flutter_build/a546a48495816cb89c5e9fad47955b33/native_assets.json: 
