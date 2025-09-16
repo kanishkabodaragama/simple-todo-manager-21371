@@ -3,16 +3,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:todo_frontend/main.dart';
 
 void main() {
-  testWidgets('App generation message displayed', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('todo_frontend App is being generated...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
+  testWidgets('Shows app bar title', (WidgetTester tester) async {
+    await tester.pumpWidget(const TodoApp());
+    await tester.pumpAndSettle();
+    expect(find.text('Your Todos'), findsOneWidget);
   });
 
-  testWidgets('App bar has correct title', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('todo_frontend'), findsOneWidget);
+  testWidgets('Has FAB to add', (WidgetTester tester) async {
+    await tester.pumpWidget(const TodoApp());
+    await tester.pump();
+    expect(find.byIcon(Icons.add), findsOneWidget);
   });
 }
