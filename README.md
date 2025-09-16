@@ -1,1 +1,3 @@
-# simple-todo-manager-21371
+# Project Repository
+
+This is the initial README file for the project.
